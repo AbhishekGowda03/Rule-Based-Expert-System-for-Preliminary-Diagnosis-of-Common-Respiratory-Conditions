@@ -1,47 +1,40 @@
-Respiratory Expert System (Rule-Based Diagnosis)
+# Respiratory Diagnosis Expert System 🩺
 
-This project is a rule-based expert system built using Python and Streamlit to provide a preliminary interpretation of common respiratory conditions based on user-reported symptoms. It is meant as an educational demonstration of rule-based inference logic and deterministic reasoning.
+**Rule-based AI system for preliminary assessment of common respiratory conditions**
 
-Overview
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Unlike machine learning models that rely on training data, this system uses explicit IF–THEN expert rules derived from typical respiratory diagnostic patterns. The application maps combinations of symptoms (such as fever, cough type, wheezing, phlegm, etc.) to likely explanations like:
+## 🎯 Project Overview
 
-Common cold
+A **rule-based expert system** designed for preliminary respiratory health interpretation. The system evaluates symptoms such as temperature, cough type, breathing difficulty, chest pain, and phlegm type using transparent, auditable medical-style rules.
 
-Flu-like viral infection
+**Domain:** Healthcare → Respiratory Condition Assessment
 
-Asthma-like pattern
+---
 
-Possible pneumonia
+## ✨ Key Features
 
-Allergy-related symptoms
+- **Explicit medical-style IF–THEN rules**
+- **Transparent reasoning — displays triggered rules**
+- **Streamlit UI for interactive input**
+- **No machine learning — deterministic logic**
+- **Works on Windows / Mac / Linux**
+- **Minimal setup & lightweight**
 
-COVID-like symptom profile
+---
 
-Non-specific respiratory infection
+## 🧠 Decision Criteria (Knowledge Rules)
 
-Unclassified / unclear pattern
+| Condition | Trigger Pattern |
+|----------|-----------------|
+| Common cold | No fever + mild/dry cough + sneezing + sore throat |
+| Flu-like viral illness | Fever + cough + fatigue |
+| Pneumonia-like | High fever + wet cough + chest pain + colored phlegm |
+| Asthma-like | Wheezing + shortness of breath |
+| COVID-like | Fever + dry cough + loss of smell |
+| Allergy-related | Sneezing + itchy eyes + no fever |
+| Non-specific | Fever + cough (unclear origin) |
 
-The focus is on transparency: the system not only gives a suggestion, but also shows which reasoning rules were triggered.
-
-Features
-
-Interactive symptom questionnaire via Streamlit UI
-
-Clear rule-based reasoning
-
-Deterministic, transparent inference (no AI black-box)
-
-Human-readable explanation of triggered rules
-
-Lightweight and easy to run locally
-
-How It Works
-
-At the core of the system is a knowledge base implemented as conditional rules in Python. Example logic:
-
-IF high fever + wet cough + chest pain + colored phlegm  
-THEN pneumonia-like condition
-
-
-Rules are evaluated in sequence, with specific patterns taking priority. This is similar to how early AI expert systems and clinical decision support tools were implemented.
+---
